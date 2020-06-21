@@ -40,7 +40,7 @@ function Board(props) {
         else if(array[2]==='O' && array[5]==='O' && array[8]==='O') props.findWinner("O")
         else if(array[0]==='O' && array[4]==='O' && array[8]==='O') props.findWinner("O")
         else if(array[2]==='O' && array[4]==='O' && array[6]==='O') props.findWinner("O")
-
+        
     },)
 
 
@@ -122,6 +122,8 @@ function Board(props) {
                     8: value
                 })
                 break;
+            default:
+                console.log("Error")
         }
     }
 
