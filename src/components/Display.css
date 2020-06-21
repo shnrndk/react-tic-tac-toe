@@ -1,8 +1,16 @@
-.board{
+.board {
     display: flex;
     justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100vh;
-background-color: tomato;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    background-color: tomato;
+    flex-direction: column;
+}
+
+.winner {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
 }

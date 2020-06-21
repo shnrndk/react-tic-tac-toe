@@ -7,7 +7,7 @@ function Tile(props) {
 
     function setMark() {
         setTileMark(props.currentMark)
-        console.log(props.currentMark)
+        
 
         if (props.first !== undefined) {
             props.storeMarks("first", props.currentMark)

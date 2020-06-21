@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Board.css'
 import Tile from './Tile'
 
@@ -10,17 +10,38 @@ function Board(props) {
         tileMark: "",
     })
 
-    const [array,setArray]=useState({
-        first:"",
-        second:"",
-        third:"",
-        fourth:"",
-        fifth:"",
-        sixth:"",
-        seventh:"",
-        eight:"",
-        nine:""
+    const [array, setArray] = useState({
+        0: "",
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+        5: "",
+        6: "",
+        7: "",
+        8: ""
     })
+
+    useEffect(() => {
+        if(array[0]==='X' && array[1]==='X' && array[2]==='X') props.findWinner("X")
+        else if(array[3]==='X' && array[4]==='X' && array[5]==='X') props.findWinner("X")
+        else if(array[6]==='X' && array[7]==='X' && array[8]==='X') props.findWinner("X")
+        else if(array[0]==='X' && array[3]==='X' && array[6]==='X') props.findWinner("X")
+        else if(array[1]==='X' && array[4]==='X' && array[7]==='X') props.findWinner("X")
+        else if(array[2]==='X' && array[5]==='X' && array[8]==='X') props.findWinner("X")
+        else if(array[0]==='X' && array[4]==='X' && array[8]==='X') props.findWinner("X")
+        else if(array[2]==='X' && array[4]==='X' && array[6]==='X') props.findWinner("X")
+
+        else if(array[0]==='O' && array[1]==='O' && array[2]==='O') props.findWinner("O")
+        else if(array[3]==='O' && array[4]==='O' && array[5]==='O') props.findWinner("O")
+        else if(array[6]==='O' && array[7]==='O' && array[8]==='O') props.findWinner("O")
+        else if(array[0]==='O' && array[3]==='O' && array[6]==='O') props.findWinner("O")
+        else if(array[1]==='O' && array[4]==='O' && array[7]==='O') props.findWinner("O")
+        else if(array[2]==='O' && array[5]==='O' && array[8]==='O') props.findWinner("O")
+        else if(array[0]==='O' && array[4]==='O' && array[8]==='O') props.findWinner("O")
+        else if(array[2]==='O' && array[4]==='O' && array[6]==='O') props.findWinner("O")
+
+    },)
 
 
     function getPreviousMark() {
@@ -50,55 +71,55 @@ function Board(props) {
         switch (num) {
             case "first": setArray({
                 ...array,
-                first: value
+                0: value
             })
                 break;
             case "second":
                 setArray({
                     ...array,
-                    second: value
+                    1: value
                 })
                 break;
             case "third":
                 setArray({
                     ...array,
-                    third: value
+                    2: value
                 })
                 break;
             case "fourth":
                 setArray({
                     ...array,
-                    fourth: value
+                    3: value
                 })
                 break;
             case "fifth":
                 setArray({
                     ...array,
-                    fifth: value
+                    4: value
                 })
                 break;
             case "sixth":
                 setArray({
                     ...array,
-                    sixth: value
+                    5: value
                 })
                 break;
             case "seventh":
                 setArray({
                     ...array,
-                    seventh: value
+                    6: value
                 })
                 break;
             case "eight":
                 setArray({
                     ...array,
-                    eight: value
+                    7: value
                 })
                 break;
             case "nine":
                 setArray({
                     ...array,
-                    nine: value
+                    8: value
                 })
                 break;
         }
