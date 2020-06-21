@@ -42,7 +42,7 @@ function Tile(props) {
         
 
 
-        props.getPreviousMark()
+        props.changeCurretMark()
     }
 
 

@@ -44,7 +44,7 @@ function Board(props) {
     },)
 
 
-    function getPreviousMark() {
+    function changeCurretMark() {
         if (state.flag === false) {
             setState({
                 ...state,
@@ -131,35 +131,35 @@ function Board(props) {
     return (
         <div className="main">
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} first="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} first="" storeMarks={storeMarks} />
             </div>
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} second="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} second="" storeMarks={storeMarks} />
             </div>
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} third="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} third="" storeMarks={storeMarks} />
             </div>
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} fourth="" storeMarks={storeMarks} />
-            </div>
-
-            <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} fifth="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} fourth="" storeMarks={storeMarks} />
             </div>
 
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} sixth="" storeMarks={storeMarks} />
-            </div>
-            <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} seventh="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} fifth="" storeMarks={storeMarks} />
             </div>
 
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} eight="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} sixth="" storeMarks={storeMarks} />
+            </div>
+            <div className="tile">
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} seventh="" storeMarks={storeMarks} />
             </div>
 
             <div className="tile">
-                <Tile getPreviousMark={getPreviousMark} currentMark={state.currentMark} nine="" storeMarks={storeMarks} />
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} eight="" storeMarks={storeMarks} />
+            </div>
+
+            <div className="tile">
+                <Tile changeCurretMark={changeCurretMark} currentMark={state.currentMark} nine="" storeMarks={storeMarks} />
             </div>
 
 
